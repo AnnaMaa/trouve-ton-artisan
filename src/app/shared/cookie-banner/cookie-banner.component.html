@@ -1,0 +1,12 @@
+<div *ngIf="showBanner" class="cookie-banner">
+    <p>
+      Nous utilisons des cookies pour améliorer votre expérience. 
+      Vous pouvez les accepter ou les refuser.
+      <a routerLink="/cookies">En savoir plus</a>
+    </p>
+    <div class="btn-group mt-2">
+      <button class="btn btn-success btn-sm" (click)="acceptCookies()">Accepter</button>
+      <button class="btn btn-outline-light btn-sm" (click)="refuseCookies()">Refuser</button>
+    </div>
+  </div>
+  

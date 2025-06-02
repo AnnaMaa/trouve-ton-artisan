@@ -1,0 +1,58 @@
+section {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    margin: 2rem auto;
+  
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #00497c;
+    }
+  
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      color: #333;
+    }
+  
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  
+    a {
+      color: #00497c;
+      text-decoration: underline;
+    }
+  
+    form {
+      margin-top: 1.5rem;
+  
+      .form-label {
+        font-weight: 500;
+      }
+  
+      .form-control {
+        border-radius: 6px;
+      }
+  
+      button {
+        margin-top: 1rem;
+      }
+    }
+  }
+  
+  @media (max-width: 576px) {
+    section {
+      padding: 1rem;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+  

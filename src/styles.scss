@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'bootstrap/scss/bootstrap';
+@use './assets/styles/variables';
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f8fc;
+  }
+  
+  .main-header, .main-footer {
+    background: #00497c;
+    color: white;
+    padding: 1rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  

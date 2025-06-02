@@ -1,0 +1,24 @@
+<section *ngIf="artisan" class="container my-4">
+
+  <app-artisan-card [artisan]="artisan"></app-artisan-card>
+  
+    <hr>
+  
+    <h2>Contacter {{ artisan.name }}</h2>
+    <form (ngSubmit)="onSubmit()" #form="ngForm">
+      <div class="mb-3">
+        <label for="nom" class="form-label">Votre nom</label>
+        <input type="text" class="form-control" id="nom" required [(ngModel)]="nom" name="nom">
+      </div>
+      <div class="mb-3">
+        <label for="objet" class="form-label">Objet</label>
+        <input type="text" class="form-control" id="objet" required [(ngModel)]="objet" name="objet">
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" rows="4" required [(ngModel)]="message" name="message"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Envoyer</button>
+    </form>
+  </section>
+  

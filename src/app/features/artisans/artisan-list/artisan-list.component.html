@@ -1,0 +1,27 @@
+<section class="artisan-list container mt-4">
+  <h1 class="mb-4">Liste des artisans</h1>
+
+  <div *ngIf="filteredArtisans.length; else noResult">
+    <app-artisan-card
+      *ngFor="let artisan of filteredArtisans"
+      [artisan]="artisan"
+    ></app-artisan-card>
+  </div>
+
+  <ng-template #noResult>
+    <p class="text-center text-muted">Aucun artisan ne correspond à votre recherche.</p>
+  </ng-template>
+</section>
+  
+  <div *ngIf="filteredArtisans.length; else noResult">
+    <div *ngFor="let artisan of filteredArtisans">
+      <!-- ArtisanCardComponent ou structure HTML -->
+      <a [routerLink]="['/artisan', artisan.id]" class="card artisan-card text-decoration-none text-dark h-100">
+        
+      </a>
+      
+    </div>
+  </div>
+  
+
+  

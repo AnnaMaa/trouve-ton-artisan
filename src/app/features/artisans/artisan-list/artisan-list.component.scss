@@ -1,0 +1,20 @@
+.artisan-card {
+    transition: transform 0.2s;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+  
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  
+    .card-text {
+      font-size: 0.95rem;
+    }
+  }
+  

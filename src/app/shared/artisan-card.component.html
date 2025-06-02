@@ -1,0 +1,15 @@
+<a [routerLink]="['/artisan', artisan.id]" class="card-wrapper d-block text-decoration-none">
+    
+      <h5>{{ artisan.name }}</h5>
+      <p class="card-text">
+        <strong>Spécialité :</strong> {{ artisan. specialty }}<br />
+        <strong>Ville :</strong> {{ artisan.location }}<br />
+        <strong>Note :</strong>
+        <span class="text-warning">
+          <ng-container *ngFor="let star of fullStars">★</ng-container>
+          <ng-container *ngFor="let star of emptyStars">☆</ng-container>
+        </span>
+      </p>
+    
+  </a>
+  

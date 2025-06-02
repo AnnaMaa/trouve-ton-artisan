@@ -17,6 +17,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "styles": ["src/styles.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/assets/styles"]
+            },
             "outputPath": "dist/trouve-ton-artisan",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -26,13 +30,8 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
-            "styles": [
-              "src/styles.scss"
+                "src/favicon.ico",
+                "src/assets" 
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -90,10 +89,10 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+              
+                "src/favicon.ico",
+                "src/assets"
+              
             ],
             "styles": [
               "src/styles.scss"
@@ -103,5 +102,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "ef49256e-c3a5-4db6-866f-18592c01fb79"
   }
 }

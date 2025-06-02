@@ -1,0 +1,34 @@
+<section class="presentation">
+    <h1>Trouve ton artisan en Auvergne-Rhône-Alpes</h1>
+  
+    <div class="etapes">
+      <h2>Comment trouver mon artisan ?</h2>
+      <ol>
+        <li> Choisir la catégorie d’artisanat dans le menu</li>
+        <li> Choisir un artisan</li>
+        <li> Le contacter via le formulaire de contact</li>
+        <li>Une réponse sera apportée sous 48h</li>
+      </ol>
+    </div>
+  </section>
+  
+  <hr>
+  
+  <section class="artisans-du-mois">
+    <h2>Nos artisans du mois</h2>
+  
+    <div class="row">
+      <div class="col-md-4" *ngFor="let artisan of artisansDuMois">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">{{ artisan.name }}</h5>
+            <p class="card-text"><strong>Spécialité :</strong> {{ artisan.specialty }}</p>
+            <p class="card-text"><strong>Ville :</strong> {{ artisan.location }}</p>
+            <p class="card-text"><strong>Note :</strong> {{ artisan.note }} ⭐</p>
+            <a [routerLink]="['/artisan', artisan.id]" class="btn btn-primary">Voir la fiche</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

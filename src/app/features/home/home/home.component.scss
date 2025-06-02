@@ -1,0 +1,33 @@
+
+@use 'variables' as *;
+
+.presentation {
+    text-align: center;
+    background: #00497c;
+    padding: 2rem;
+    color: white;
+    
+  
+    .etapes {
+      margin-top: 2rem;
+      ol {
+        text-align: left;
+        max-width: 600px;
+        margin: auto;
+      }
+
+      color: white;
+    }
+  }
+  
+  .artisans-du-mois {
+    padding: 2rem;
+    background: white;
+  
+    h2 {
+      margin-bottom: 2rem;
+      text-align: center;
+      
+    }
+  }
+  

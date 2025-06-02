@@ -1,0 +1,44 @@
+<header class="main-header">
+  <nav class="container-fluid py-3">
+
+    <!-- Ligne 1 : logo + bouton hamburger -->
+    <div class="d-flex justify-content-between align-items-center">
+      <a routerLink="/" class="d-flex align-items-center text-white text-decoration-none">
+        <img src="assets/images/logo.png" alt="Logo"  class="logo-img me-2" />
+        
+      </a>
+
+      <!-- Bouton hamburger visible uniquement sur mobile -->
+      <button class="btn btn-outline-light d-md-none" (click)="menuOuvert = !menuOuvert">
+        ☰
+      </button>
+    </div>
+
+   <!-- Bloc menu & recherche : masqué sur mobile sauf si menuOuvert -->
+   <div
+   class="menu-overlay d-md-flex justify-content-between align-items-center mt-3"
+   [class.d-none]="isMobile && !menuOuvert"
+ >
+   <!-- Menu -->
+   <ul class="nav-menu d-flex gap-3 list-unstyled flex-wrap mb-3 mb-md-0">
+    <a [routerLink]="['/categorie']" [queryParams]="{ categorie: 'bâtiment' }">Bâtiment</a>
+    <a [routerLink]="['/categorie']" [queryParams]="{ categorie: 'services' }">Services</a>
+    <a [routerLink]="['/categorie']" [queryParams]="{ categorie: 'fabrication' }">Fabrication</a>
+    <a [routerLink]="['/categorie']" [queryParams]="{ categorie: 'alimentation' }">Alimentation</a>
+    
+   </ul>
+
+      <!-- Barre de recherche -->
+      <form class="d-flex" (ngSubmit)="onSearch()" #f="ngForm">
+        <input type="text" class="form-control me-2" placeholder="Rechercher..."
+               [(ngModel)]="searchTerm" name="search" />
+        <button class="btn btn-outline-light" type="submit">🔍</button>
+      </form>
+      
+    </div>
+
+  </nav>
+</header>
+
+
+  
