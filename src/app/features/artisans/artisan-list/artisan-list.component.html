@@ -15,7 +15,7 @@
   
   <div *ngIf="filteredArtisans.length; else noResult">
     <div *ngFor="let artisan of filteredArtisans">
-      <!-- ArtisanCardComponent ou structure HTML -->
+      
       <a [routerLink]="['/artisan', artisan.id]" class="card artisan-card text-decoration-none text-dark h-100">
         
       </a>

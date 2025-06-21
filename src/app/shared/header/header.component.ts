@@ -19,7 +19,7 @@ export class HeaderComponent {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.detectScreenSize(); // ✅ appelle sécurisé
+    this.detectScreenSize(); 
   }
 
   @HostListener('window:resize')
